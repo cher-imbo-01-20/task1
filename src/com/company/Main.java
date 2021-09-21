@@ -9,20 +9,27 @@ public class Main {
         }
         return f;
     }
-    public static void main(String[] args) {
+    public static void task6() {
         int[] array;
         int size;
         do {
             array = new int[(int) ((Math.random()) * 10)];
         } while (array.length==0);
-        for (int i = 0; i < array.length; i++) {
+        for (int i=0; i<array.length; i++) {
             array[i] = (int)(Math.random()*100);
             System.out.println(array[i]);
         }
         System.out.println("\n");
         sort(array, 0, array.length);
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+        int sum=0;
+        for (int var : array) {
+            sum+=var;
+            System.out.println(var);
         }
+        System.out.println("\n");
+        System.out.println(sum);
+    }
+    public static void main(String[] args) {
+       task6();
     }
 }
